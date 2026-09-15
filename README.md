@@ -31,4 +31,4 @@ C#, .NET Framework, WPF, Newtonsoft.Json. Архитектура — упрощ�
 История хранится в %LocalAppData%\CalculatorApp\calculator_history.json.
 
 ## Автор
-_ФИО, группа, год_
+_Панков Егор Владимирович, 2026_
