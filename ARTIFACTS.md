@@ -3,7 +3,7 @@
 ## 1. Введение
 
 Документ описывает состав артефактов и протоколы взаимодействия между
-модулями проекта «Инженерный калькулятор» (WPF). Область применения —
+модулями проекта «Инженерный калькулятор» (WPF). Область применения -
 командная разработка, интеграция модулей, сопровождение проекта.
 
 ## 2. Перечень артефактов
@@ -34,7 +34,7 @@
 ## 3. Протоколы взаимодействия
 
 ### Протокол: ICalculatorService
-Участники: ViewModels → Services
+Участники: ViewModels - Services
 Назначение: предоставление математических операций.
 Интерфейс:
 - double Add(double a, double b);
@@ -50,12 +50,12 @@
 - double Log10(double a);
 - double Ln(double a);
 Формат данных: примитивы double.
-Ограничения: Divide бросает DivideByZeroException; SquareRoot, Log10, Ln —
+Ограничения: Divide бросает DivideByZeroException; SquareRoot, Log10, Ln -
 ArgumentException.
 Соглашения: синхронные методы, PascalCase, глагол + существительное.
 
 ### Протокол: IHistoryService
-Участники: ViewModels → Services
+Участники: ViewModels - Services
 Назначение: загрузка и сохранение истории вычислений.
 Интерфейс:
 - ObservableCollection<HistoryItem> Load();
@@ -64,8 +64,8 @@ ArgumentException.
 Файл: %LocalAppData%\CalculatorApp\calculator_history.json.
 Соглашения: синхронные методы; ошибки ввода-вывода логируются и не пробрасываются.
 
-### Протокол: View ↔ ViewModel
-Участники: Views → ViewModels
+### Протокол: View - ViewModel
+Участники: Views - ViewModels
 Назначение: передача нажатий пользователя и отображение состояния.
 Интерфейс:
 - void OnButton(string content);
@@ -79,7 +79,7 @@ ArgumentException.
 Соглашения: code-behind без бизнес-логики.
 
 ### Протокол: события UI
-Участники: Views → ViewModels
+Участники: Views - ViewModels
 Назначение: маршрутизация действий пользователя.
 События: Click кнопок, MouseDoubleClick по HistoryList,
 Checked/Unchecked у EngineerToggle.
@@ -100,8 +100,8 @@ Checked/Unchecked у EngineerToggle.
 | Ветки Git | feature/, fix/ | feature/themes |
 | Коммиты | тип: описание | feat: add ARTIFACTS.md |
 
-Версионирование — SemVer (MAJOR.MINOR.PATCH).
-Текущая версия проекта — 0.1.0.
+Версионирование - SemVer (MAJOR.MINOR.PATCH).
+Текущая версия проекта - 0.1.0.
 
 ## 5. Заключение
 
